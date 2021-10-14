@@ -10,7 +10,13 @@ public class ShoppingWomenCategoryPage {
     public final String url = "http://automationpractice.com/index.php?id_category=3&controller=category";
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[1]/div/div[1]/div")
-    private WebElement womenCardDetail;
+    private WebElement womenCardDetail1;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[5]/div/div[1]/div")
+    private WebElement womenCardDetail2;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li[6]/div/div[1]/div")
+    private WebElement womenCardDetail3;
 
     public ShoppingWomenCategoryPage(WebDriver driver){
         this.driver = driver;
@@ -21,7 +27,15 @@ public class ShoppingWomenCategoryPage {
         return url;
     }
 
-    public void clickOnWomenCardDetail(){
-        womenCardDetail.click();
+    public void clickOnWomenCardDetail1(){
+        womenCardDetail1.click();
     }
+
+    public void clickOnWomenCardDetail2(){
+        womenCardDetail2.click();
+    }
+    public void clickOnWomenCardDetail3(){
+        womenCardDetail3.click();
+    }
+
 }

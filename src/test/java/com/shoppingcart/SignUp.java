@@ -35,7 +35,7 @@ public class SignUp extends Base{
         signUpPage.enterEmailAndGoToSignUpSection(email);
         //Thread.sleep(5000);
         Assert.assertTrue(emailAcceptedPage.lblCreateAccountIsDisplayed());
-        System.out.println("TEST1 verifyEmail: EMAIL VERIFICADO");
+        System.out.println("Test verifyEmail: Email verificado");
     }
 
     @Test(dataProvider = "valid data", dataProviderClass = SignUpDataProvider.class, dependsOnMethods = {"verifyEmail"})
@@ -47,7 +47,7 @@ public class SignUp extends Base{
 
         signUpPage.fillSignUpForm(firstname, lastname, password, company, address, city, postalCode, phone, aliasAddress);
         Assert.assertTrue(signUpSuccessPage.lblWelcomeIsDisplayed());
-        System.out.println("TEST2 testDataRegistration: FORMULARIO LLENADO CON EXITO");
+        System.out.println("Test testDataRegistration: Formulario llenado con exito");
     }
 
     @AfterTest
